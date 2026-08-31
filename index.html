@@ -7,7 +7,7 @@
 <meta name="description" content="リカバリーマットレスと呼ばれる寝具が増えていますが、何を指すかはブランドごとに異なります。三層構造のマットレスを設計してきたLIMNEの考え方と、現行3モデルの設計思想をご説明します。">
 <link rel="canonical" href="https://limne.jp/pages/recovery">
 <meta property="og:title" content="リカバリーマットレスとは｜LIMNEの睡眠設計の考え方">
-<meta property="og:description" content="リカバリーマットレスと呼ばれる寝具が増えています。LIMNEの考え方を、検証できる事実だけでご説明します。">
+<meta property="og:description" content="リカバリーマットレスと呼ばれる寝具が増えています。LIMNEの考え方と、現行3モデルの構造設計をご説明します。">
 <meta property="og:url" content="https://limne.jp/pages/recovery">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://limne.jp/cdn/shop/files/topfv_matt_pc.jpg?width=1200">
@@ -16,12 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/jkk6cnz.css">
 <style>
-/* ============================================================
-   LIMNE / リカバリーマットレスLP 構成モック
-   書体・字間・行間は limne.jp 実測値に準拠
-   （本サイト：Nunito Sans + dnp-shuei-gothic-kin-std／Adobe Fonts）
-   モック環境ではキットのドメイン制限により Zen Kaku Gothic New で代替
-   ============================================================ */
+/* Font stack / design tokens */
 :root{
   --ink:#332d31;
   --ink-2:#463c42;
@@ -111,13 +106,15 @@ table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;m
 .mb-kind{font-size:11px;letter-spacing:.26em;color:var(--ink-faint)}
 .mb-lead{max-width:840px;font-size:14.5px;line-height:2.05;color:var(--ink-2)}
 .mb-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;margin-top:40px;align-items:start}
+/* グリッド項目は既定の min-width:auto だと画像のwidth属性で列が広がるため 0 に落とす */
+.mb-grid > *,.expert-grid > *{min-width:0}
 .mb-grid figure{margin:0}
+.mb-grid figure img{width:100%;height:auto}
 .mb-copy h4{font-size:16px;font-weight:500;letter-spacing:.12em;margin:0 0 12px;line-height:1.8}
 .mb-copy p{font-size:14px;line-height:2.05;color:var(--ink-2)}
 .mb-copy p + p{margin-top:14px}
 .fig-note{font-size:11.5px;color:var(--ink-soft);margin-top:10px;line-height:1.8}
 
-/* 縦長合成バナーから図版・写真部分だけを見せる切り抜き */
 .crop{width:100%;object-fit:cover;display:block;background:#fff}
 
 /* ---------- 動画 ---------- */
@@ -137,8 +134,6 @@ table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;m
 
 /* ---------- 01 ヒーロー ---------- */
 .hero{position:relative;padding:0;min-height:94vh;display:flex;align-items:flex-start;justify-content:center;overflow:hidden}
-/* 元画像は右側に販促コピー面がある1枚もの。
-   写真領域は左1104px/1920px＝57.5%。185%まで拡大して左だけを見せる（安全余白66px） */
 .hero img.bg{position:absolute;top:0;left:0;height:100%;width:auto;
   min-width:185%;max-width:none;object-fit:cover;object-position:left center}
 .hero .scrim{position:absolute;inset:0;background:
@@ -150,18 +145,13 @@ table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;m
 .hero .h1-sub{display:block;font-size:clamp(14.5px,1.9vw,21px);line-height:1.9;
   letter-spacing:.2em;color:rgba(255,255,255,.94)}
 .hero .h1-kw{display:inline-block;position:relative;margin-top:18px;padding-bottom:.22em;
-  font-size:clamp(31px,4.6vw,48px);font-weight:500;line-height:1.5;letter-spacing:.12em}
+  white-space:nowrap;
+  font-size:clamp(24px,7.2vw,48px);font-weight:500;line-height:1.5;letter-spacing:.12em}
 .hero .h1-kw::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--gold)}
 
 /* ---------- 02 直答ブロック ---------- */
-.approach-list{margin:18px 0 0 2px;list-style:none;max-width:760px}
-.approach-list li{position:relative;padding:13px 0 13px 26px;border-bottom:1px solid var(--line-2);
-  font-size:14.5px;line-height:1.9;color:var(--ink-2)}
-.approach-list li::before{content:"";position:absolute;left:4px;top:24px;width:7px;height:7px;
-  border-radius:50%;background:var(--gold)}
 .subhead{font-size:16px;font-weight:500;letter-spacing:.14em;margin:44px 0 6px}
 .subhead-l{font-size:clamp(19px,2.3vw,24px);font-weight:400;letter-spacing:.15em;line-height:1.7}
-.approach-list li b{font-weight:500;color:var(--ink)}
 .qa-top{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:26px}
 .qcard{display:flex;flex-direction:column;border:1px solid var(--line-2);background:var(--cream)}
 .qcard-head{background:var(--ink);color:var(--cream);font-size:14.5px;font-weight:500;
@@ -177,7 +167,6 @@ table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;m
   font-size:16px;letter-spacing:.1em;line-height:1.75}
 
 .data-strip{margin-top:76px;padding-top:56px;border-top:1px solid var(--line-2)}
-/* 悩みセクションの2カラムを継承すると右半分に押し込まれるので、ここだけ全幅に戻す */
 .worries .inner.data-strip{display:block}
 .chart-grid{display:grid;grid-template-columns:1.8fr 1fr;gap:64px;margin-top:34px;align-items:start}
 .chart{max-width:none}
@@ -185,11 +174,6 @@ table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;m
 .chart svg{width:100%;height:auto}
 .chart-note{margin-top:22px;font-size:12px;color:var(--ink-soft);line-height:1.9}
 
-/* ---------- 03 リカバリーマットレスとは ---------- */
-.fact{margin-top:36px;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  font-size:14.5px;line-height:2.05;color:var(--ink-2)}
-.fact b{font-weight:500;color:var(--ink)}
-.stance{margin-top:46px;font-size:clamp(17px,2vw,20px);line-height:2;letter-spacing:.15em}
 
 /* ---------- 04 世界観（暗転ブロック：ページ内で唯一の濃色セクション） ---------- */
 .philosophy{background:var(--ink-2)}
@@ -203,15 +187,9 @@ table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;m
   font-size:15px;line-height:2.05;letter-spacing:.08em;color:rgba(250,248,244,.82);max-width:840px}
 
 /* ---------- 05 構造・商品 ---------- */
-.asset-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:54px 40px;margin-top:52px}
-.asset .cap{padding:16px 0 0;font-size:13.5px;color:var(--ink-2);line-height:1.95}
-.asset .cap b{display:block;font-weight:400;color:var(--ink);font-size:14.5px;letter-spacing:.1em;
-  margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--gold-line)}
 
 .model-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:78px}
 .mcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;overflow:hidden}
-/* 商品画像は上部に商品名・NEWバッジが焼き込まれているため下側を表示する
-   （文字下端8.1% ／ 可視開始18.6% ＝ 安全余白10.5pt。比率固定のためビューポート非依存） */
 .mcard img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 74%;
   transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
 .mcard:hover img{transform:scale(1.04)}
@@ -279,7 +257,7 @@ table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;m
   margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line-2)}
 .rev .who{font-size:12.5px;margin-top:16px;color:var(--ink-soft);letter-spacing:.04em}
 
-/* ---------- 10 FAQ（アコーディオン。details/summaryなので畳んでいてもDOMに本文が残る） ---------- */
+/* ---------- 09 FAQ ---------- */
 .faq-list{margin-top:40px}
 .faq-list details{border-bottom:1px solid var(--line)}
 .faq-list details:first-of-type{border-top:1px solid var(--line)}
@@ -307,10 +285,10 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   body{font-size:14.5px}
   section{padding:84px 22px}
   .hero{min-height:86vh}
-  .hero .inner{padding:15vh 22px 0}
+  .hero .inner{padding:15vh 22px 0;transform:none}
   .worries .inner,.research .top,.expert-grid,
   .qa-top{grid-template-columns:1fr;gap:22px}
-  .asset-grid,.model-cards,.voice-grid,.rev-grid,.review-head,.chart-grid,
+  .model-cards,.voice-grid,.rev-grid,.review-head,.chart-grid,
   .mb-grid{grid-template-columns:1fr;gap:34px}
   .mb-grid{gap:26px}
   .feature{grid-template-columns:36px 1fr;gap:12px}
@@ -339,7 +317,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       "name": "リカバリーマットレスはどう選べばいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "リカバリーマットレスは、商品名や知名度ではなく、どのアプローチ（機能性素材・医療機器認証・構造設計）で作られているかを確かめて選ぶのが出発点です。機能性素材なら素材の説明を、医療機器なら認証の範囲を、構造設計なら体圧分散や寝返りのしやすさが体格や寝方に合うかを確認してください。"
+        "text": "リカバリーマットレスは、商品名や知名度ではなく、どのアプローチ（機能性素材・医療機器認証・構造設計）で作られているかを確かめて選ぶのが出発点です。機能性素材なら素材の説明を、医療機器なら認証の範囲を、構造設計なら体圧分散や寝返りのしやすさが体格や寝方に合うかを確認してください。保証の期間や条件は各社で異なるため、試せる仕組みがあるかどうかも判断材料になります。"
       }
     },
     {
@@ -347,7 +325,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       "name": "疲れが取れるマットレスはありますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "「使えば疲れが取れる」と言い切れるマットレスはありません。疲労には生活習慣など寝具以外の要因も関わり、寝具にできるのは睡眠環境を整えることまでです。"
+        "text": "「使えば疲れが取れる」と言い切れるマットレスはありません。疲労には生活習慣など寝具以外の要因も関わり、寝具にできるのは睡眠環境を整えることまでです。LIMNEの現行マットレスも、特定の効果をうたうものではありません。体圧分散や寝返りのしやすさに配慮した構造設計で、睡眠環境づくりに取り組んでいます。"
       }
     },
     {
@@ -355,7 +333,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       "name": "自分に合う硬さがわかりません",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "体格や寝姿勢によって合う硬さは異なります。1分で終わるマットレス診断をご用意しています。"
+        "text": "体格や寝姿勢によって合う硬さは異なります。1分で終わるマットレス診断をご用意していますので、お気軽にお試しください。"
       }
     },
     {
@@ -395,7 +373,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       "name": "120日間完全返金保証は、返品送料など発生しますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "返品送料、事務手数料など一切発生しません。全額ご返金いたします。エントリーモデルは返品保証対象外で、120日間返金保証オプション（プラス10,000円）をマットレスと同時にご購入いただくことで返金保証をお付けすることができます。"
+        "text": "返品送料、事務手数料など一切発生しません。全額ご返金いたします。※エントリーモデルは返品保証対象外です。120日間返金保証オプション（プラス10,000円）をマットレスと同時にご購入いただくことで、返金保証をお付けすることができます。保証を購入後にお付けすることはできません。"
       }
     },
     {
@@ -411,7 +389,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       "name": "使用中のマットレスを引き取ってもらえますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "関東地域限定で、不要マットレス回収の有料オプションサービスをご用意しております。マットレスをカートに追加後、カート内の「追加オプションを見る」からご追加ください。"
+        "text": "関東地域限定ではございますが、不要マットレス回収の有料オプションサービスをご用意しております。ご希望の際は、マットレスをカートに追加後、カート内の「追加オプションを見る」からご追加ください。"
       }
     },
     {
@@ -419,7 +397,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       "name": "体験できる場所や店舗はありますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "東京にある恵比寿ガーデンプレイスのLimneショールームで体験いただけます。"
+        "text": "東京にある恵比寿ガーデンプレイスのLimneショールームで体験いただけます。最新の店舗情報は店舗案内ページをご覧ください。"
       }
     }
   ]
@@ -444,7 +422,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
 </head>
 <body>
 
-<!-- 01 ヒーロー -->
+<!-- Hero -->
 <section class="hero">
   <img class="bg" fetchpriority="high" decoding="async"
        src="https://limne.jp/cdn/shop/files/topfv_matt_pc.jpg?width=1920"
@@ -456,7 +434,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   </div>
 </section>
 
-<!-- 02 直答ブロック（AIO・LLMO対応：検索意図への回答を最上部に置く） -->
+<!-- 01 About -->
 <section class="answers" id="about">
   <div class="inner">
     <div class="eyebrow">About Recovery Mattress</div>
@@ -468,7 +446,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       <div class="feature">
         <div>
           <h4>体圧分散と寝姿勢の保持</h4>
-          <p>ウレタンを重ねた多層構造や、独立したポケットコイルなどで身体の重みを点ではなく面で分散し、寝姿勢を保ちやすくする設計が採られています。LIMNEでは、三層ウレタン構造と二層ポケットコイルの2方式でこの設計に取り組んでいます。</p>
+          <p>ウレタンを重ねた多層構造や、独立したポケットコイルなどで身体の重みを点ではなく面で分散し、寝姿勢を保ちやすくする設計が採られています。LIMNEでは、三層ウレタン構造・二層ポケットコイル・ミルキーコイルの11層構造の3方式でこの設計に取り組んでいます。</p>
         </div>
       </div>
       <div class="feature">
@@ -541,7 +519,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   </div>
 </section>
 
-<!-- 02 悩み -->
+<!-- 02 Morning Feelings -->
 <section class="worries tone-w">
   <div class="inner">
     <div>
@@ -561,8 +539,8 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   </div>
 
   <div class="inner data-strip">
-    <h3 class="subhead subhead-l">寝具を見直すきっかけとして、多く挙がる悩みです</h3>
-    <p class="lead">LIMNEのマットレスは、幅広い年代の方にご利用いただいています。</p>
+    <h3 class="subhead subhead-l">幅広い年代の方に選ばれています</h3>
+    <p class="lead">購入者の年代と性別の構成は、次のとおりです。</p>
     <div class="chart-grid">
       <figure class="chart">
         <figcaption>購入者の年代構成</figcaption>
@@ -611,11 +589,11 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
         </svg>
       </figure>
     </div>
-    <p class="chart-note">自社ECの購入者のうち、属性が判明した方の集計です（2025年9月〜2026年8月・当社調べ）。</p>
+    <p class="chart-note">自社ECの購入者のうち、属性が判明した方の集計です（2025年9月〜2026年8月・当社調べ）。<br>※購入者の構成を示すものであり、寝具によって疲労が取れることをお約束するものではありません。</p>
   </div>
 </section>
 
-<!-- 04 世界観 -->
+<!-- 03 Philosophy -->
 <section class="philosophy">
   <div class="inner">
     <div class="eyebrow">LIMNE's Recovery</div>
@@ -633,7 +611,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   </div>
 </section>
 
-<!-- 05 構造・商品 -->
+<!-- 04 Structure -->
 <section class="models" id="models">
   <div class="inner">
     <div class="eyebrow">Structure</div>
@@ -643,7 +621,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
     <!-- モデル01 スフエアー -->
     <div class="model-block m-first">
       <div class="mb-head"><span class="mb-num">01</span><h3>スフエアーモデル</h3><span class="mb-kind">ウレタン三層構造</span></div>
-      <p class="mb-lead">高い体圧分散性で寝姿勢サポート。独自素材「スフエアー」と三層ウレタン構造により、柔らかく身体を受け止めながら、理想的な体圧分散と自然な寝姿勢をサポートする主力モデルです。</p>
+      <p class="mb-lead">高い体圧分散性で寝姿勢サポート。独自素材「スフエアー」と三層ウレタン構造により、柔らかく身体を受け止めながら、体圧を分散し、自然な寝姿勢をサポートする主力モデルです。</p>
 
       <div class="mb-grid">
         <figure>
@@ -667,7 +645,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
           <p class="fig-note">生卵をマットレス表面に押し込む試験の様子。</p>
         </figure>
         <div class="mb-copy">
-          <h4>生たまごも割れないほどの圧力分散</h4>
+          <h4>生卵も割れないほどの圧力分散</h4>
           <p>生卵を上から押し込んでも割れない圧力分散性を実現。肩や腰にかかる圧力を効率良く分散させます。</p>
           <p>身体の一部に体重や圧がかかりすぎないよう、独自の三層構造が面で包み込むように支えます。高い圧力分散で身体を面で支えるため、肩、腰をやさしく包みます。</p>
         </div>
@@ -693,6 +671,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
           <h4>通気性と、洗えるカバー</h4>
           <p>独自素材「スフエアー」は通常ウレタン比で約1.47倍の通気性を持つという試験結果があり、熱や湿気を逃がしやすいのが特徴です。</p>
           <p>マットレスカバーの側面にはメッシュ素材を使用し、湿気を外へ逃がしやすくしています。専用カバーは取り外してご家庭で洗濯が可能です。シーツとの接地面から不衛生になりがちなマットレスカバーを、こまめな洗濯で清潔に保てます。</p>
+          <p class="fig-note">※通気性の数値は、当社従来品のウレタンとの比較による試験結果です。試験条件により結果は異なります。</p>
         </div>
       </div>
     </div>
@@ -704,7 +683,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
 
       <div class="mb-grid">
         <figure>
-          <img src="https://limne.jp/cdn/shop/files/lmo-rich-twin-new_1080x.png?v=1782293521"
+          <img src="rich-twin-coil.jpg" width="600" height="425"
                alt="二層に重ねたポケットコイルの分解図" loading="lazy" decoding="async">
           <p class="fig-note">二層コイルの分解図。上下のコイルが役割を分担する。</p>
         </figure>
@@ -717,21 +696,22 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
 
       <div class="mb-grid">
         <figure>
-          <img src="https://limne.jp/cdn/shop/files/llmo-rich-japan-project_1080x.png?v=1782353799"
-               alt="二層に重なったコイルとコイル数を示すツインリカバリー構造の図" loading="lazy" decoding="async">
-          <p class="fig-note">ツインリカバリー構造。二層に重なったコイル×高密度のコイル数。</p>
+          <img class="crop" src="https://limne.jp/cdn/shop/files/llmo-rich-japan-project_1080x.png?v=1782353799"
+               style="aspect-ratio:27/8;object-position:center 49%"
+               alt="二層に重なったコイルと高密度のコイル配列" loading="lazy" decoding="async">
+          <p class="fig-note">二層に重なったコイルと、コイルの配列。</p>
         </figure>
         <div class="mb-copy">
           <h4>日本人の体格に合わせた「ツインリカバリー構造」</h4>
-          <p>Limneモデル唯一の「ツインリカバリー構造」を採用。二層に重なったコイルと、1,714個（キングサイズ）のコイル数で、寝返りのしやすさと体圧分散を両立しています。</p>
+          <p>LIMNEの3モデルの中で、このモデルだけが採用する「ツインリカバリー構造」。二層に重なったコイルと、1,714個（キングサイズ）のコイル数で、寝返りのしやすさと体圧分散を両立しています。</p>
         </div>
       </div>
 
       <div class="mb-grid">
         <figure>
-          <img src="https://limne.jp/cdn/shop/files/llmo-rich-boudani_1080x.png?v=1782287967"
-               alt="防ダニ抗菌加工のアイコンと、通気性の良いメッシュ構造のマットレス底面" loading="lazy" decoding="async">
-          <p class="fig-note">防ダニ抗菌加工と、通気性の良いメッシュ構造の底面。</p>
+          <img src="rich-ventilation.jpg" width="800" height="682"
+               alt="マットレス内部を空気が通り抜ける様子と、底面のメッシュ生地の拡大" loading="lazy" decoding="async">
+          <p class="fig-note">コイル構造による空気の通り道と、底面のメッシュ生地。</p>
         </figure>
         <div class="mb-copy">
           <h4>通気性・衛生面に配慮</h4>
@@ -748,7 +728,8 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
 
       <div class="mb-grid">
         <figure>
-          <img src="https://limne.jp/cdn/shop/files/llmo-entry-11layer-new_1080x.png?v=1782377877"
+          <img class="crop" src="https://limne.jp/cdn/shop/files/llmo-entry-11layer-new_1080x.png?v=1782377877"
+               style="aspect-ratio:54/88;object-position:right center"
                alt="1層から11層まで番号を振った11層構造の分解図" loading="lazy" decoding="async">
           <p class="fig-note">11層構造の分解図。7層目がミルキーコイル。</p>
         </figure>
@@ -822,7 +803,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
         <div class="mbody">
           <span class="mkind">ミルキーコイル</span>
           <h3>エントリーモデル</h3>
-          <p>体圧分散と通気性を備えた、はじめての1枚に選びやすいモデル。</p>
+          <p>ミルキーコイル580個で体圧分散に配慮した、はじめての1枚に選びやすいモデル。</p>
           <span class="mlink">商品ページを見る</span>
         </div>
       </a>
@@ -837,7 +818,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   </div>
 </section>
 
-<!-- 06 監修 -->
+<!-- 05 Supervision -->
 <section class="experts tone-w">
   <div class="inner">
     <div class="eyebrow">Supervision</div>
@@ -850,9 +831,9 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
 
     <div class="expert-grid">
       <div class="expert">
-        <img class="crop" src="https://limne.jp/cdn/shop/files/fact250325_03_01.jpg?width=900"
-             style="aspect-ratio:5/4;object-fit:cover;object-position:center 38%"
-             alt="睡眠学会前理事 神山潤先生" loading="lazy" decoding="async">
+        <img src="expert-kamiyama.jpg" width="465" height="580"
+             style="aspect-ratio:465/580;object-fit:cover"
+             alt="神山 潤 先生" loading="lazy" decoding="async">
         <div class="body">
           <span class="role">監修</span>
           <h3>神山 潤 先生</h3>
@@ -861,9 +842,9 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
         </div>
       </div>
       <div class="expert">
-        <img src="https://limne.jp/cdn/shop/files/llmo-rich-yazama-resize_1080x.png?v=1782356678"
-             style="aspect-ratio:1080/878;object-fit:cover"
-             alt="理学療法士 矢間先生" loading="lazy" decoding="async">
+        <img src="expert-yazama.jpg" width="640" height="878"
+             style="aspect-ratio:465/580;object-fit:cover;object-position:center 20%"
+             alt="矢間 先生" loading="lazy" decoding="async">
         <div class="body">
           <span class="role">理学療法士</span>
           <h3>矢間 先生</h3>
@@ -875,7 +856,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   </div>
 </section>
 
-<!-- 07 共同研究 -->
+<!-- 06 Research -->
 <section class="research">
   <div class="inner">
     <div class="top">
@@ -891,14 +872,14 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       </div>
       <div class="frame">
         <img class="crop" src="https://limne.jp/cdn/shop/files/fact250325_03_02.jpg?width=1100"
-             style="aspect-ratio:3/2;object-position:center 9%"
-             alt="青山学院大学理工学部との共同研究で睡眠計測を行う様子" loading="lazy" decoding="async">
+             style="aspect-ratio:11/4;object-position:center 12.5%"
+             alt="大学との共同研究で睡眠計測を行う様子" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
 </section>
 
-<!-- 08 使っている方々 -->
+<!-- 07 Users -->
 <section class="voices tone-w">
   <div class="inner">
     <div class="eyebrow">Users</div>
@@ -950,7 +931,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   </div>
 </section>
 
-<!-- 09 レビュー -->
+<!-- 08 Reviews -->
 <section class="reviews">
   <div class="inner">
     <div class="eyebrow">Reviews</div>
@@ -984,13 +965,13 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
     <p class="disclosure">※掲載しているレビューは個人の感想であり、効果を保証するものではありません。</p>
 
     <div class="cta-band">
-      <p>言葉より、ひと晩の体験のほうが確かです。<br>返品保証制度あり（適用条件・返送費用等の詳細は規約ページをご確認ください）。</p>
+      <p>言葉より、ひと晩の体験のほうが確かです。<br>返品保証制度あり（エントリーモデルは対象外。適用条件・返送費用等の詳細は<a href="https://limne.jp/pages/shopping_guide">ショッピングガイド</a>をご確認ください）。</p>
       <a class="btn" href="https://limne.jp/collections/mattress">マットレス一覧を見る</a>
     </div>
   </div>
 </section>
 
-<!-- 10 FAQ -->
+<!-- 09 FAQ -->
 <section class="faq tone-soft">
   <div class="inner">
     <div class="eyebrow">FAQ</div>
@@ -1036,7 +1017,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   </div>
 </section>
 
-<!-- 11 CTA -->
+<!-- Final CTA -->
 <section class="final">
   <div class="inner">
     <div class="eyebrow">Try LIMNE</div>
@@ -1047,7 +1028,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       <a class="btn btn-ghost" href="https://limne.jp/pages/shindan">マットレス診断をする</a>
       <a class="btn btn-ghost" href="https://limne.jp/pages/shop">ショールームで試す</a>
     </div>
-    <div class="guarantee">返品保証制度あり（適用条件・返送費用等の詳細は規約ページをご確認ください）</div>
+    <div class="guarantee">返品保証制度あり（エントリーモデルは対象外。適用条件・返送費用等の詳細は<a href="https://limne.jp/pages/shopping_guide">ショッピングガイド</a>をご確認ください）</div>
   </div>
 </section>
 
