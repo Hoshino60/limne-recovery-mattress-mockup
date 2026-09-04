@@ -13,8 +13,7 @@
 <meta property="og:image" content="https://limne.jp/cdn/shop/files/topfv_matt_pc.jpg?width=1200">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.typekit.net/jkk6cnz.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&amp;family=Zen+Kaku+Gothic+New:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <style>
 /* Font stack / design tokens */
 :root{
@@ -83,6 +82,7 @@ h2{font-size:clamp(22px,2.5vw,27px);font-weight:400;line-height:1.55;
 
 /* ---------- 比較表 ---------- */
 .tbl-scroll{overflow-x:auto;margin-top:26px}
+.tbl-hint{display:none}
 table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;min-width:640px}
 .cmp th,.cmp td{border:1px solid var(--line);padding:13px 16px;text-align:left;vertical-align:top;font-weight:400}
 .cmp thead th{background:#efe9df;font-weight:500;letter-spacing:.08em;font-size:13px}
@@ -216,6 +216,8 @@ table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;m
 .expert .sub{font-size:13.5px;color:var(--ink-soft);margin-bottom:20px;line-height:1.9}
 .expert blockquote{font-size:14px;line-height:2;color:var(--ink-2);
   padding-top:18px;border-top:1px solid var(--line)}
+.expert .expert-note{font-size:14px;line-height:2;color:var(--ink-2);
+  padding-top:18px;border-top:1px solid var(--line)}
 
 /* ---------- 07 共同研究 ---------- */
 .research .top{display:grid;grid-template-columns:1fr 1fr;gap:66px;align-items:center}
@@ -295,6 +297,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   .mb-grid{gap:26px}
   .feature{grid-template-columns:36px 1fr;gap:12px}
   .feature::before{font-size:19px}
+  .tbl-hint{display:block;font-size:11.5px;color:var(--ink-soft);margin:26px 0 -14px;letter-spacing:.04em}
   .keymsg{padding:30px 8px;letter-spacing:.09em}
   .model-block{margin-top:64px;padding-top:52px}
   .cta-band{margin-top:64px;padding:38px 18px}
@@ -311,7 +314,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       "name": "リカバリーマットレスに効果はありますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "効果があるかどうかは製品ごとに異なり、一律には答えられません。リカバリーマットレスには統一された規格がなく、名称自体が効果を保証するものではないためです。医療機器として認証された製品でも、効果を表示できるのは認証された範囲までです。認証のない製品は、一般的な寝具と同じ扱いになります。"
+        "text": "効果があるかどうかは製品ごとに異なり、一律には答えられません。リカバリーマットレスには統一された規格がなく、名称自体が効果を保証するものではないためです。医療機器として認証された製品でも、効果を表示できるのは認証された範囲までです。認証のない製品は、一般的な寝具と同じ扱いになります。また、素材や構造が適したものであっても、体格や寝方によって感じ方は異なります。ご自身の身体に合うかどうかも、あわせて確認してください。"
       }
     },
     {
@@ -359,7 +362,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       "name": "耐久性が心配です。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "リムネでは、人が一晩に寝返りをする回数約20回の10年分である8万回の耐久試験を行っており、クリアした製品になります。また、品質保証として10年保証をお付けしております。"
+        "text": "耐久試験の回数はモデルごとに異なります。スフエアーモデルは8万回（人が一晩にする寝返り約20回の10年分にあたる回数）、エントリーモデルは10万回、リッチコイルモデルは20万回の耐久試験を実施し、クリアしています。また、いずれのモデルにも品質保証として10年保証をお付けしております。"
       }
     },
     {
@@ -375,7 +378,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       "name": "120日間返金保証について教えてください",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "120日間返金保証は、マットレスと同時にご購入いただく有料オプション（10,000円・税込）です。エントリーモデルは対象外で、購入後にオプションを追加することはできません。オプションをご購入いただいた場合、返品送料・事務手数料はかかりません。ご返金はマットレス本体金額のみとなります。"
+        "text": "120日間完全返金保証は、スフエアーモデルとリッチコイルモデルには無料で付帯します。エントリーモデルは、ご購入時に有償の保証オプション（10,000円・税込）をあわせてお申し込みいただいた場合に対象となります。オプションを購入後に追加することはできません。返品送料・事務手数料はかからず、ご返金はマットレス本体金額のみとなります（有償オプション料金は返金対象外です）。無金利分割決済でご購入の場合は、保証期間が30日間になります。ご利用にあたっては条件があります。公式サイトでご購入の方に限り、1度だけご利用いただけます。お申し込みの前に所定の最低利用期間があり、そのうえで商品到着後120日以内（無金利分割決済の場合は30日以内）にお手続きいただく必要があります。不要マットレス引き取りサービス（37,000円・税込）をあわせてご利用の場合、そのサービス料は返金対象外です。また、搬出経路の状況により回収できない場合はご利用いただけないことがあり、引き取り日確定後、引き取り日の4日前を過ぎてキャンセルされる場合はキャンセル料6,000円（税込）がかかります。詳しい条件はショッピングガイドをご確認ください。"
       }
     },
     {
@@ -441,7 +444,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   <div class="inner">
     <div class="eyebrow">About Recovery Mattress</div>
     <h2>リカバリーマットレスとは</h2>
-    <p class="lead">リカバリーマットレスとは、睡眠中の身体への負担をやわらげ、休息をサポートすることを目的とした高機能マットレスのことをいいます。寝ている間の血行促進などから翌日の疲労感などを和らげる効果があり、睡眠の質を高めることができると言われています。公的な規格や統一された定義はなく、設計の考え方は製品ごとに異なります。</p>
+    <p class="lead">リカバリーマットレスとは、睡眠中の身体への負担をやわらげ、休息をサポートすることを目的とした高機能マットレスのことをいいます。寝ている間の血行促進などから翌日の疲労感などを和らげる効果があり、睡眠の質を高めることができると言われています。公的な規格や統一された定義はなく、設計の考え方は製品ごとに異なります。大きくは2種類に分けられます。1つは高い体圧分散性やスムーズな寝返りによって睡眠中の身体への負担をやわらげるもの、もう1つは特殊な機能性素材によって血行促進や疲労回復を促すとされるものです。</p>
 
     <h3 class="subhead">主な特徴</h3>
     <div class="feature-list">
@@ -454,7 +457,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       <div class="feature">
         <div>
           <h4>医療機器認証の有無で、表示できる範囲が変わる</h4>
-          <p>磁気や遠赤外線などの機能を持ち、医療機器として認証を受けたモデルは、認証された範囲内で定められた表示ができます。認証のないマットレスは、効果の表示ではなく構造設計で睡眠環境を整えます。LIMNEの現行3モデルは認証を受けておらず、後者の構造設計型にあたります。</p>
+          <p>磁気や遠赤外線などの機能を持ち、医療機器として認証を受けたモデルは、認証された範囲内で定められた表示ができます。認証のないマットレスは、効果を表示することはできず、構造設計によって睡眠環境を整えます。LIMNEの現行3モデルは認証を受けておらず、後者の構造設計型にあたります。なお、マットレスに特殊ケア繊維「<a href="https://limne.jp/products/limne_mattress-aath-cover">A.A.TH</a>」のボックスシーツを組み合わせる場合は、寝具全体としては機能性素材を用いる構成になります。</p>
         </div>
       </div>
       <div class="feature">
@@ -467,32 +470,34 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
 
     <h3 class="subhead">確認しておきたい違い</h3>
     <p class="lead">リカバリーマットレスには、機能性素材によるもの、医療機器としての認証によるもの、構造設計によるもの、といった違いがあります。</p>
+    <p class="tbl-hint">表は横にスクロールしてご覧いただけます。</p>
     <div class="tbl-scroll">
       <table class="cmp">
         <thead>
-          <tr><th>アプローチ</th><th>主な素材・仕組み</th><th>選ぶときに確認すること</th></tr>
+          <tr><th scope="col">アプローチ</th><th scope="col">主な素材・仕組み</th><th scope="col">選ぶときに確認すること</th></tr>
         </thead>
         <tbody>
           <tr>
-            <th>機能性素材型</th>
+            <th scope="row">機能性素材型<br><small>← A.A.TH併用時はこの型</small></th>
             <td>特殊繊維や機能性素材を寝具に用いる</td>
             <td>素材の説明と、その根拠が示されているか</td>
           </tr>
           <tr>
-            <th>医療機器認証型</th>
+            <th scope="row">医療機器認証型</th>
             <td>磁気・遠赤外線などの機能で医療機器として認証を受けている</td>
             <td>認証の範囲。効果を表示できるのは認証された範囲までです</td>
           </tr>
           <tr>
-            <th>構造設計型<br><small>← LIMNEはこの型</small></th>
+            <th scope="row">構造設計型<br><small>← LIMNEはこの型</small></th>
             <td>ウレタン多層構造・ポケットコイルなどの構造で睡眠環境を整える</td>
             <td>体圧分散・寝返りのしやすさ・通気性が、体格や寝方に合うか</td>
           </tr>
         </tbody>
       </table>
     </div>
+    <p class="chart-note">※LIMNEの現行3モデルは構造設計型です。マットレスに特殊ケア繊維A.A.THのボックスシーツを併用する場合は、機能性素材型に準ずる構成になります。</p>
 
-    <p class="keymsg">リムネは、<br>体圧分散・寝返りのしやすさ・通気性といった構造設計から、<br>リカバリー体験を睡眠環境から探求するマットレスブランドです。</p>
+    <p class="keymsg">リムネは、<br>体圧分散・寝返りのしやすさ・通気性といった構造設計によって、<br>リカバリー体験を睡眠環境から探求するマットレスブランドです。</p>
 
     <h3 class="subhead">リカバリーマットレスでよくある質問</h3>
     <div class="qa-top">
@@ -501,7 +506,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
         <div class="qcard-fig">
           <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDEwMjQiIHdpZHRoPSIxNTM2IiBoZWlnaHQ9IjEwMjQiIHJvbGU9ImltZyIgYXJpYS1oaWRkZW49InRydWUiPgo8dGl0bGU+55S75YOP44KS5YWl44KM44KL5p6gPC90aXRsZT4KPHJlY3QgeD0iMS41IiB5PSIxLjUiIHdpZHRoPSIxNTMzIiBoZWlnaHQ9IjEwMjEiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxwYXRoIGQ9Ik0gMS41IDEuNSBMIDE1MzQuNSAxMDIyLjUgTSAxNTM0LjUgMS41IEwgMS41IDEwMjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjMiLz4KPC9zdmc+Cg==" alt="" loading="lazy" decoding="async" width="1536" height="1024">
         </div>
-        <p class="qcard-body">効果があるかどうかは製品ごとに異なり、一律には答えられません。リカバリーマットレスには統一された規格がなく、名称自体が効果を保証するものではないためです。医療機器として認証された製品でも、効果を表示できるのは認証された範囲までです。認証のない製品は、一般的な寝具と同じ扱いになります。</p>
+        <p class="qcard-body">効果があるかどうかは製品ごとに異なり、一律には答えられません。リカバリーマットレスには統一された規格がなく、名称自体が効果を保証するものではないためです。医療機器として認証された製品でも、効果を表示できるのは認証された範囲までです。認証のない製品は、一般的な寝具と同じ扱いになります。また、素材や構造が適したものであっても、体格や寝方によって感じ方は異なります。ご自身の身体に合うかどうかも、あわせて確認してください。</p>
       </article>
       <article class="qcard">
         <h4 class="qcard-head">リカバリーマットレスはどう選べばいいですか？</h4>
@@ -536,7 +541,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
     <div class="frame">
       <img class="crop" src="https://cdn.shopify.com/s/files/1/0434/3758/8643/files/blog_bnr003_01.gif?v=1628659342"
            style="aspect-ratio:11/12;object-position:right center"
-           alt="LIMNEマットレスで眠る女性（画像内に広告コピーを含む素材）" loading="lazy" decoding="async">
+           alt="LIMNEマットレスで眠る女性" loading="lazy" decoding="async">
     </div>
   </div>
 
@@ -606,9 +611,9 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       LIMNEは、その時間のためにマットレスをつくっています。
     </p>
     <div class="fuse">
-      <p>そのまま身をあずけられるような、包み込まれる寝心地。やわらかいTOP層が、身体を面で受け止めます。</p>
-      <p>そっと手を添えるような支え方で。MID層・BTM層が沈み込みをコントロールし、身体を支えます。</p>
-      <p>ブランドとして目指しているのは、一日の終わりに身をあずけられる時間をつくること。その考え方から生まれたのが「柔らかいのに沈みすぎない」寝心地です。</p>
+      <p>いつでも誰かとつながり、どこでも仕事にアクセスできる毎日。便利に思えたつながりは、家の中にも、休みの日にも、社会のリズムを流し込んできます。</p>
+      <p>目の前の誰かを理解すること。それと同じくらい、自分の声に耳を傾けること。LIMNEは、癒しと寛ぎで、一続きになってしまった現代社会に境界線を取り戻すことをミッションに掲げています。</p>
+      <p>あなたの身体のリズムと、心の輪郭を守ってくれる境界線。それを取り戻す一日の終わりのために、LIMNEは「柔らかいのに沈みすぎない」寝心地を設計しています。</p>
     </div>
   </div>
 </section>
@@ -618,7 +623,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   <div class="inner">
     <div class="eyebrow">Structure</div>
     <h2>この考え方は、いまの3モデルの<br>構造に表れています</h2>
-    <p class="lead">LIMNEのマットレスは、体圧分散・寝返りのしやすさ・通気性という3つの観点から構造を設計しています。ここにあるのは、すでに公開している設計の中身です。</p>
+    <p class="lead">LIMNEのマットレスは、体圧分散・寝返りのしやすさ・通気性という3つの観点から構造を設計しています。</p>
 
     <!-- モデル01 スフエアー -->
     <div class="model-block m-first">
@@ -744,50 +749,57 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
     </div>
 
     <h3 class="subhead">3モデルの構造比較</h3>
+    <p class="tbl-hint">表は横にスクロールしてご覧いただけます。</p>
     <div class="tbl-scroll">
       <table class="cmp">
         <thead>
-          <tr><th></th><th>スフエアーモデル</th><th>リッチコイルモデル</th><th>エントリーモデル</th></tr>
+          <tr><th scope="col"></th><th scope="col">スフエアーモデル</th><th scope="col">リッチコイルモデル</th><th scope="col">エントリーモデル</th></tr>
         </thead>
         <tbody>
           <tr>
-            <th>構造</th>
+            <th scope="row">構造</th>
             <td>ウレタン三層構造（厚さ22cm）</td>
             <td>二層ポケットコイル（厚さ25cm）</td>
             <td>ミルキーコイル・11層構造</td>
           </tr>
           <tr>
-            <th>中身</th>
+            <th scope="row">中身</th>
             <td>独自高反発素材「スフエアー」。TOP 25N／MID 120N／BTM 140Nの3層設計</td>
             <td>二層に重ねたポケットコイル1,714個（キングサイズ）の「ツインリカバリー構造」</td>
             <td>日本の気候・体型を考慮したミルキーコイル580個</td>
           </tr>
           <tr>
-            <th>寝心地の設計</th>
+            <th scope="row">寝心地の設計</th>
             <td>柔らかく受け止めて、沈みすぎない</td>
             <td>上層で受け止め、下層で沈み込みすぎを防ぐ</td>
             <td>コイルの弾力で寝姿勢を保つ</td>
           </tr>
           <tr>
-            <th>通気の工夫</th>
+            <th scope="row">通気の工夫</th>
             <td>独自素材と、側面のメッシュ素材</td>
             <td>二層コイル構造による空気の通り道／防ダニ・抗菌加工</td>
             <td>コイル構造による通気</td>
           </tr>
           <tr>
-            <th>カバー</th>
+            <th scope="row">カバー</th>
             <td>取り外して洗濯できます</td>
             <td>取り外せません（乾いた布で拭き取り）</td>
             <td>取り外せません（乾いた布で拭き取り）</td>
           </tr>
           <tr>
-            <th>保証</th>
-            <td>10年間交換保証／120日間返金保証（有料オプション）</td>
-            <td>10年間交換保証／120日間返金保証（有料オプション）</td>
-            <td>10年間交換保証のみ（返金保証は対象外）</td>
+            <th scope="row">耐久試験</th>
+            <td>8万回</td>
+            <td>20万回</td>
+            <td>10万回</td>
           </tr>
           <tr>
-            <th>商品ページ</th>
+            <th scope="row">保証</th>
+            <td>10年間交換保証／120日間完全返金保証（標準付帯）</td>
+            <td>10年間交換保証／120日間完全返金保証（標準付帯）</td>
+            <td>10年間交換保証／120日間完全返金保証は有償オプション（10,000円・税込／ご購入時のみ）</td>
+          </tr>
+          <tr>
+            <th scope="row">商品ページ</th>
             <td><a class="cmp-link" href="https://limne.jp/products/limne-the-mattress">スフエアーモデル</a></td>
             <td><a class="cmp-link" href="https://limne.jp/products/mattress-rich">リッチコイルモデル</a></td>
             <td><a class="cmp-link" href="https://limne.jp/products/mattress-entry">エントリーモデル</a></td>
@@ -795,6 +807,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
         </tbody>
       </table>
     </div>
+    <p class="chart-note">※耐久試験の回数と条件はモデルごとに異なります。耐用年数を保証するものではありません。<br>※無金利分割決済でご購入の場合、120日間完全返金保証の期間は30日間になります。<br>※完全返金保証には、所定の最低利用期間などの適用条件があります。詳細は<a href="https://limne.jp/pages/shopping_guide#8">ショッピングガイド</a>をご確認ください。</p>
 
     <div class="model-cards">
       <a class="mcard" href="https://limne.jp/products/limne-the-mattress">
@@ -858,7 +871,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
           <span class="role">監修</span>
           <h3>神山 潤 先生</h3>
           <div class="sub">睡眠学会前理事／睡眠に関する著書は7冊を超える</div>
-          <blockquote>睡眠環境の設計にあたり、寝心地・体圧分散・寝姿勢の考え方について監修をいただいています。</blockquote>
+          <p class="expert-note">睡眠環境の設計にあたり、寝心地・体圧分散・寝姿勢の考え方について監修をいただいています。</p>
         </div>
       </div>
       <div class="expert">
@@ -869,7 +882,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
           <span class="role">理学療法士</span>
           <h3>矢間 先生</h3>
           <div class="sub">自分に合った寝具選びについて</div>
-          <blockquote>適切な寝姿勢を保つことは、身体への負担の軽減につながります。そのためには、身体の曲線にフィットした、触れた瞬間気持ちよさを感じる、自分に合った寝具を選ぶことが大切です。</blockquote>
+          <blockquote>（前略）そのためには、身体の曲線にフィットした、触れた瞬間気持ちよさを感じる、自分に合った寝具を選ぶことが大切です。（後略）</blockquote>
         </div>
       </div>
     </div>
@@ -914,7 +927,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
         </a>
         <div class="vbody">
           <div class="vwho"><b>Miyako</b> 様<small>フィットネスYouTuber／パーソナルジム経営</small></div>
-          <blockquote>普段、女性の健康的な体づくりについて発信しているのですが、睡眠も体づくりに大切なことだと考えております。<br><br>リムネのマットレスは、横になった際に不思議な脱力感があり……</blockquote>
+          <blockquote>普段、女性の健康的な体づくりについて発信しているのですが、睡眠も体づくりに大切なことだと考えております。<br><br>（中略）リムネのマットレスは、横になった際に不思議な脱力感があり（後略）</blockquote>
           <a class="read" href="https://limne.jp/blogs/interview/voice-miyako">インタビューを読む</a>
         </div>
       </article>
@@ -926,7 +939,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
         </a>
         <div class="vbody">
           <div class="vwho"><b>梅川 壱ノ介</b> 様<small>舞踏家</small></div>
-          <blockquote>仕事柄、体調管理には人一倍気にしており、睡眠は、精神面においても特に重要であると考えています。<br><br>稽古や打ち合わせもあるので、日中活動することが多いのですが、公演前の稽古時間は、多い時で12時間に及ぶこともあります。</blockquote>
+          <blockquote>仕事柄、体調管理には人一倍気にしており、睡眠は、精神面においても特に重要であると考えています。<br><br>稽古や打ち合わせもあるので、日中活動することが多いのですが、公演前の稽古時間は、多い時で12時間に及ぶこともあります。（後略）</blockquote>
           <a class="read" href="https://limne.jp/blogs/interview/voice-umekawaichinosuke">インタビューを読む</a>
         </div>
       </article>
@@ -944,7 +957,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       </article>
     </div>
 
-    <blockquote class="pullquote">身体をよく使う方ほど、眠りに求めるものははっきりしています。<br>その声を、そのまま記事にしています。</blockquote>
+    <p class="pullquote">身体をよく使う方ほど、眠りに求めるものははっきりしています。<br>その声を、インタビュー記事で紹介しています。</p>
 
     <div class="more"><a class="btn btn-ghost" href="https://limne.jp/blogs/interview">愛用者インタビュー一覧を見る</a></div>
     <p class="disclosure">※掲載内容は個人の感想であり、効果を保証するものではありません。</p>
@@ -968,24 +981,24 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
     <div class="rev-grid">
       <div class="rev">
         <div class="rtitle">良い買い物でした。</div>
-        到着して開封したら程なくマットレスになりました。寝心地はふんわり包み込まれる感じです。柔らかいですが、寝返りが大変と言うわけでも無いので毎日気持ち良く寝てます。
+        到着して開封したら程なくマットレスになりました。寝心地はふんわり包み込まれる感じで最高です！柔らかいですが、寝返りが大変と言うわけでも無いので毎日気持ち良く寝てます。（後略）
         <div class="who">匿名</div>
       </div>
       <div class="rev">
-        <div class="rtitle">寝返りがしやすい</div>
-        柔らかいのに沈み込みすぎず、寝返りのときに引っかかる感じがありません。
+        <div class="rtitle">王道の心地よさ</div>
+        体重のかかった部分が緩やか凹んで包み込まれるような柔らかさ。<br>寝返りを打っても体重が乗っている所が気持ち良く凹む。（後略）
         <div class="who">匿名</div>
       </div>
       <div class="rev">
-        <div class="rtitle">届いてすぐ使えました</div>
-        圧縮された状態で届き、開封してから数時間でしっかり厚みが出ました。女性ひとりでも設置できました。
+        <div class="rtitle">買って良かった</div>
+        開封後は直ぐに膨らみ、難しい事は何もなかった。（後略）
         <div class="who">匿名</div>
       </div>
     </div>
     <p class="disclosure">※掲載しているレビューは個人の感想であり、効果を保証するものではありません。</p>
 
     <div class="cta-band">
-      <p>言葉より、ひと晩の体験のほうが確かです。<br>120日間返金保証は有料オプション（10,000円・税込／マットレスと同時購入のみ。エントリーモデルは対象外）。詳細は<a href="https://limne.jp/pages/shopping_guide">ショッピングガイド</a>をご確認ください。</p>
+      <p>言葉より、ひと晩の寝心地体験を。<br>120日間完全返金保証は、スフエアーモデル・リッチコイルモデルに無料で付帯します。エントリーモデルは、ご購入時に有償オプション（10,000円・税込）をお申し込みいただくと対象になります。無金利分割決済でのご購入時は30日間となるほか、所定の最低利用期間などの適用条件があります。詳細は<a href="https://limne.jp/pages/shopping_guide#8">ショッピングガイド</a>をご確認ください。</p>
       <a class="btn" href="https://limne.jp/collections/mattress">マットレス一覧を見る</a>
     </div>
   </div>
@@ -1011,7 +1024,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       </details>
       <details>
         <summary>耐久性が心配です。</summary>
-        <div class="ans"><p>リムネでは、人が一晩に寝返りをする回数約20回の10年分である8万回の耐久試験を行っており、クリアした製品になります。また、品質保証として10年保証をお付けしております。</p></div>
+        <div class="ans"><p>耐久試験の回数はモデルごとに異なります。スフエアーモデルは8万回（人が一晩にする寝返り約20回の10年分にあたる回数）、エントリーモデルは10万回、リッチコイルモデルは20万回の耐久試験を実施し、クリアしています。</p><p>また、いずれのモデルにも品質保証として10年保証をお付けしております。</p></div>
       </details>
       <details>
         <summary>10年間交換保証とは何ですか。</summary>
@@ -1019,7 +1032,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       </details>
       <details>
         <summary>120日間返金保証について教えてください</summary>
-        <div class="ans"><p>120日間返金保証は、マットレスと同時にご購入いただく有料オプション（10,000円・税込）です。エントリーモデルは対象外で、購入後にオプションを追加することはできません。</p><p>オプションをご購入いただいた場合、返品送料・事務手数料はかかりません。ご返金はマットレス本体金額のみとなります。</p></div>
+        <div class="ans"><p>120日間完全返金保証は、スフエアーモデルとリッチコイルモデルには無料で付帯します。エントリーモデルは、ご購入時に有償の保証オプション（10,000円・税込）をあわせてお申し込みいただいた場合に対象となります。オプションを購入後に追加することはできません。</p><p>返品送料・事務手数料はかからず、ご返金はマットレス本体金額のみとなります（有償オプション料金は返金対象外です）。無金利分割決済でご購入の場合は、保証期間が30日間になります。</p><p>ご利用にあたっては条件があります。公式サイトでご購入の方に限り、1度だけご利用いただけます。お申し込みの前に所定の最低利用期間があり、そのうえで商品到着後120日以内（無金利分割決済の場合は30日以内）にお手続きいただく必要があります。不要マットレス引き取りサービス（37,000円・税込）をあわせてご利用の場合、そのサービス料は返金対象外です。また、搬出経路の状況により回収できない場合はご利用いただけないことがあり、引き取り日確定後、引き取り日の4日前を過ぎてキャンセルされる場合はキャンセル料6,000円（税込）がかかります。詳しい条件は<a href="https://limne.jp/pages/shopping_guide#8">ショッピングガイド</a>をご確認ください。</p></div>
       </details>
       <details>
         <summary>何日先まで配送日指定は可能ですか？</summary>
@@ -1042,13 +1055,13 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
   <div class="inner">
     <div class="eyebrow">Try LIMNE</div>
     <h2>その寝心地を、<br>確かめてみてください</h2>
-    <p>言葉より、ひと晩の体験のほうが確かです。ご自宅で、あるいはショールームで。</p>
+    <p>言葉より、ひと晩の寝心地体験を。ご自宅で、あるいはショールームで。</p>
     <div class="cta-grid">
       <a class="btn" href="https://limne.jp/collections/mattress">マットレス一覧を見る</a>
       <a class="btn btn-ghost" href="https://limne.jp/pages/shindan">マットレス診断をする</a>
       <a class="btn btn-ghost" href="https://limne.jp/pages/shop">ショールームで試す</a>
     </div>
-    <div class="guarantee">120日間返金保証は有料オプション（10,000円・税込／マットレスと同時購入のみ。エントリーモデルは対象外）。10年間交換保証は標準で付帯します。詳細は<a href="https://limne.jp/pages/shopping_guide">ショッピングガイド</a>をご確認ください。</div>
+    <div class="guarantee">120日間完全返金保証は、スフエアーモデル・リッチコイルモデルに無料で付帯します。エントリーモデルは、ご購入時に有償オプション（10,000円・税込）をお申し込みいただくと対象になります。無金利分割決済でご購入の場合、保証期間は30日間です。所定の最低利用期間やご利用回数などの適用条件があり、引き取りサービス料など返金対象外となる費用があります。10年間交換保証は全モデル標準で付帯します。詳細は<a href="https://limne.jp/pages/shopping_guide#8">ショッピングガイド</a>をご確認ください。</div>
   </div>
 </section>
 
