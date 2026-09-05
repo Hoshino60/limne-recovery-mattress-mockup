@@ -87,8 +87,17 @@ table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.9;m
 .cmp th,.cmp td{border:1px solid var(--line);padding:13px 16px;text-align:left;vertical-align:top;font-weight:400}
 .cmp thead th{background:#efe9df;font-weight:500;letter-spacing:.08em;font-size:13px}
 .cmp tbody th{background:#f7f3ec;font-weight:500;white-space:nowrap}
-.cmp .cmp-link{font-size:12.5px;border-bottom:1px solid var(--line);text-decoration:none;padding-bottom:3px}
-.cmp .cmp-link::after{content:"　→"}
+.cmp .cmp-link{font-size:12.5px;border-bottom:2px solid var(--gold);text-decoration:none;padding-bottom:3px}
+.cmp .cmp-link::after{content:"　→";font-size:1.3em}
+
+/* 本文中のリンク（リンクであることを明示） */
+.inline-link{border-bottom:2px solid var(--gold);text-decoration:none;padding-bottom:1px}
+.inline-link::after{content:"　→";font-size:1.3em}
+
+/* 比較表：自社に該当する行を金枠で強調 */
+.cmp-highlight th,.cmp-highlight td{border-top:2px solid var(--gold);border-bottom:2px solid var(--gold)}
+.cmp-highlight th{border-left:2px solid var(--gold)}
+.cmp-highlight td:last-child{border-right:2px solid var(--gold)}
 
 /* ---------- キーメッセージ（ページの結論） ---------- */
 .keymsg{margin:64px auto 0;max-width:860px;padding:40px 20px;text-align:center;
@@ -457,7 +466,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
       <div class="feature">
         <div>
           <h4>医療機器認証の有無で、表示できる範囲が変わる</h4>
-          <p>磁気や遠赤外線などの機能を持ち、医療機器として認証を受けたモデルは、認証された範囲内で定められた表示ができます。認証のないマットレスは、効果を表示することはできず、構造設計によって睡眠環境を整えます。LIMNEの現行3モデルは認証を受けておらず、後者の構造設計型にあたります。なお、マットレスに特殊ケア繊維「<a href="https://limne.jp/products/limne_mattress-aath-cover">A.A.TH</a>」のボックスシーツを組み合わせる場合は、寝具全体としては機能性素材を用いる構成になります。</p>
+          <p>磁気や遠赤外線などの機能を持ち、医療機器として認証を受けたモデルは、認証された範囲内で定められた表示ができます。認証のないマットレスは、効果を表示することはできず、構造設計によって睡眠環境を整えます。なお、マットレスに特殊ケア繊維「<a class="inline-link" href="https://limne.jp/products/limne_mattress-aath-cover">A.A.TH</a>」のボックスシーツを組み合わせる場合は、寝具全体としては機能性素材を用いる構成になります。</p>
         </div>
       </div>
       <div class="feature">
@@ -487,7 +496,7 @@ footer{background:var(--cream);color:var(--ink-faint);font-size:12px;text-align:
             <td>磁気・遠赤外線などの機能で医療機器として認証を受けている</td>
             <td>認証の範囲。効果を表示できるのは認証された範囲までです</td>
           </tr>
-          <tr>
+          <tr class="cmp-highlight">
             <th scope="row">構造設計型<br><small>← LIMNEはこの型</small></th>
             <td>ウレタン多層構造・ポケットコイルなどの構造で睡眠環境を整える</td>
             <td>体圧分散・寝返りのしやすさ・通気性が、体格や寝方に合うか</td>
