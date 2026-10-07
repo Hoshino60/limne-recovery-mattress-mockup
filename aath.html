@@ -524,6 +524,84 @@
   object-position: 60% 45%;
 }
 
+
+/* 3巡目：見出しの後に商品写真（箱入り）を置く。下の段は掛けている写真1枚＋素材・洗濯の2項目 */
+.limne-recovery .aath-guide .aath-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-rows: auto auto auto 1fr;
+  grid-template-areas: "label hero" "title hero" "intro hero" ". hero";
+  column-gap: 40px;
+  align-items: start;
+}
+
+.limne-recovery .aath-guide .aath-label { grid-area: label; }
+.limne-recovery .aath-guide .aath-title { grid-area: title; }
+.limne-recovery .aath-guide .aath-intro { grid-area: intro; }
+
+.limne-recovery .aath-guide .aath-hero {
+  grid-area: hero;
+  align-self: center;
+}
+
+.limne-recovery .aath-guide .aath-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 70% 20%;
+}
+
+.limne-recovery .aath-guide .aath-detail {
+  display: grid;
+  grid-template-columns: 144px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.limne-recovery .aath-guide .aath-detail .aath-photo img {
+  aspect-ratio: 1 / 1;
+  object-position: 60% 45%;
+}
+
+.limne-recovery .aath-guide .aath-care {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.limne-recovery .aath-guide .aath-detail-body .aath-item-note {
+  margin-top: 10px;
+}
+
+@media (max-width: 860px) {
+  .limne-recovery .aath-guide .aath-heading {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: "label" "title" "hero" "intro";
+  }
+
+  .limne-recovery .aath-guide .aath-hero {
+    margin-top: 14px;
+  }
+
+  .limne-recovery .aath-guide .aath-hero img {
+    aspect-ratio: 16 / 10;
+    object-position: 70% 25%;
+  }
+
+  .limne-recovery .aath-guide .aath-detail {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .limne-recovery .aath-guide .aath-care {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
 </style>
 
 <!-- Start VWO Async SmartCode -->
@@ -4429,7 +4507,60 @@ div:has( > svg[id="effectiveAppsScrollToTopBtn"])::before {
 
 
 
-<!-- BEGIN app block: shopify://apps/pagefly-ai-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200 -->
+<!-- BEGIN app block: shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d -->
+
+
+<style>
+                .globo-formbuilder[data-id="87059"],.globo-formbuilder[data-id="ODcwNTk="]{
+        display: block;
+        height:853px;
+        margin: 30px auto;
+    }
+               </style>
+
+
+<!-- END app block --><!-- BEGIN app block: shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8 --><!-- Start of Judge.me Core -->
+
+
+
+
+
+
+
+
+
+
+
+ <style class='jdgm-settings-style'>﻿.jdgm-xx{left:0}:root{--jdgm-primary-color: #524349;--jdgm-secondary-color: rgba(82,67,73,0.1);--jdgm-star-color: #524349;--jdgm-write-review-text-color: white;--jdgm-write-review-bg-color: #524349;--jdgm-paginate-color: #524349;--jdgm-border-radius: 0;--jdgm-reviewer-name-color: #524349}.jdgm-histogram__bar-content{background-color:#524349}.jdgm-rev[data-verified-buyer=true] .jdgm-rev__icon.jdgm-rev__icon:after,.jdgm-rev__buyer-badge.jdgm-rev__buyer-badge{color:white;background-color:#524349}.jdgm-review-widget--small .jdgm-gallery.jdgm-gallery .jdgm-gallery__thumbnail-link:nth-child(8) .jdgm-gallery__thumbnail-wrapper.jdgm-gallery__thumbnail-wrapper:before{content:"もっと見る"}@media only screen and (min-width: 768px){.jdgm-gallery.jdgm-gallery .jdgm-gallery__thumbnail-link:nth-child(8) .jdgm-gallery__thumbnail-wrapper.jdgm-gallery__thumbnail-wrapper:before{content:"もっと見る"}}.jdgm-preview-badge .jdgm-star.jdgm-star{color:#524349}.jdgm-prev-badge[data-average-rating='0.00']{display:none !important}.jdgm-author-fullname{display:none !important}.jdgm-author-last-initial{display:none !important}.jdgm-rev-widg__title{visibility:hidden}.jdgm-rev-widg__summary-text{visibility:hidden}.jdgm-prev-badge__text{visibility:hidden}.jdgm-rev__prod-link-prefix:before{content:'について'}.jdgm-rev__variant-label:before{content:'バリエーション: '}.jdgm-rev__out-of-store-text:before{content:'（ストア外）'}@media only screen and (min-width: 768px){.jdgm-rev__pics .jdgm-rev_all-rev-page-picture-separator,.jdgm-rev__pics .jdgm-rev__product-picture{display:none}}@media only screen and (max-width: 768px){.jdgm-rev__pics .jdgm-rev_all-rev-page-picture-separator,.jdgm-rev__pics .jdgm-rev__product-picture{display:none}}.jdgm-preview-badge[data-template="product"]{display:none !important}.jdgm-preview-badge[data-template="collection"]{display:none !important}.jdgm-preview-badge[data-template="index"]{display:none !important}.jdgm-review-widget[data-from-snippet="true"]{display:none !important}.jdgm-verified-count-badget[data-from-snippet="true"]{display:none !important}.jdgm-carousel-wrapper[data-from-snippet="true"]{display:none !important}.jdgm-all-reviews-text[data-from-snippet="true"]{display:none !important}.jdgm-medals-section[data-from-snippet="true"]{display:none !important}.jdgm-ugc-media-wrapper[data-from-snippet="true"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_collected_via_store_invitation"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_collected_from_another_provider"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_collected_from_store_visitor"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_earned_for_future_purchase"]{display:none !important}.jdgm-review-snippet-widget{--jdgm-snippet-card-color: #fff;--jdgm-snippet-text-color: #000;--jdgm-snippet-lighter-text-color: #7B7B7B;--jdgm-snippet-star-color: #524349;--jdgm-snippet-border-radius: 8px;--jdgm-snippet-arrows-bg-color: #fff;--jdgm-snippet-arrows-color: #000}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__cards-container .jdgm-rev-snippet-card{border-radius:8px;background:#fff}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__cards-container .jdgm-rev-snippet-card__rev-rating .jdgm-star{color:#524349}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__prev-btn,.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__next-btn{border-radius:50%;background:#fff}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__prev-btn>svg,.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__next-btn>svg{fill:#000}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jm-mfp-content,.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev__icon,.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev__pic-img,.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev__reply{border-radius:8px}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev[data-verified-buyer="true"] .jdgm-full-rev__icon::after{border-radius:8px}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev .jdgm-rev__buyer-badge{border-radius:calc( 8px / 2 )}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev .jdgm-full-rev__replier::before{content:'LIMNEオンラインショップ'}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev .jdgm-full-rev__product-button{border-radius:calc( 8px * 6 )}
+</style> <style class='jdgm-settings-style'></style>
+
+  
+  
+  
+  <style class='jdgm-miracle-styles'>
+  @-webkit-keyframes jdgm-spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);-ms-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes jdgm-spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);-ms-transform:rotate(359deg);transform:rotate(359deg)}}@font-face{font-family:'JudgemeStar';src:url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAScAA0AAAAABrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAEgAAAABoAAAAcbyQ+3kdERUYAAARgAAAAHgAAACAAMwAGT1MvMgAAAZgAAABGAAAAVi+vS9xjbWFwAAAB8AAAAEAAAAFKwBMjvmdhc3AAAARYAAAACAAAAAj//wADZ2x5ZgAAAkAAAAEJAAABdH33LXtoZWFkAAABMAAAAC0AAAA2BroQKWhoZWEAAAFgAAAAHAAAACQD5QHQaG10eAAAAeAAAAAPAAAAFAYAAABsb2NhAAACMAAAAA4AAAAOAO4AeG1heHAAAAF8AAAAHAAAACAASgAvbmFtZQAAA0wAAADeAAABkorWfVZwb3N0AAAELAAAACkAAABEp3ubLXgBY2BkYADhPPP4OfH8Nl8ZuJkYQODS2fRrCPr/aSYGxq1ALgcDWBoAO60LkwAAAHgBY2BkYGDc+v80gx4TAwgASaAICmABAFB+Arl4AWNgZGBgYGPQYWBiAAIwyQgWc2AAAwAHVQB6eAFjYGRiYJzAwMrAwejDmMbAwOAOpb8ySDK0MDAwMbByMsCBAAMCBKS5pjA4PGB4wMR44P8BBj3GrQymQGFGkBwAjtgK/gAAeAFjYoAAEA1jAwAAZAAHAHgB3crBCcAwDEPRZydkih567CDdf4ZskmLwFBV8xBfCaC4BXkOUmx4sU0h2ngNb9V0vQCxaRKIAevT7fGWuBrEAAAAAAAAAAAA0AHgAugAAeAF9z79Kw1AUx/FzTm7un6QmJtwmQ5Bg1abgEGr/BAqlU6Gju+Cgg1MkQ/sA7Vj7BOnmO/gUvo2Lo14NqIO6/IazfD8HEODtmQCfoANwNsyp2/GJt3WKQrd1NLiYYWx2PBqOsmJMEOznPOTzfSCrhAtbbLdmeFLJV9eKd63WLrZcIcuaEVdssWCKM6pLCfTVOYbz/0pNSMSZKLIZpvh78sAUH6PlMrreTCabP9r+Z/puPZ2ur/RqpQHgh+MIegCnXeM4MRAPjYN//5tj4ZtTjkFqEdmeMShlEJ7tVAly2TAkx6R68Fl4E/aVvn8JqHFQ4JS1434gXKcuL31dDhzs3YbsEOAd/IU88gAAAHgBfY4xTgMxEEVfkk0AgRCioKFxQYd2ZRtpixxgRU2RfhU5q5VWseQ4JdfgAJyBlmNwAM7ABRhZQ0ORwp7nr+eZAa54YwYg9zm3ynPOeFRe8MCrciXOh/KSS76UV5L/iDmrLiS5AeU519wrL3jmSbkS5115yR2fyivJv9kx0ZMZ2RLZw27q87iNQi8EBo5FSPIMw3HqBboi5lKTGAGDp8FKXWP+t9TU01Lj5His1Ba6uM9dTEMwvrFmbf5GC/q2drW3ruXUhhsCiQOjznFlCzYhHUZp4xp76vsvQh89CQAAeAFjYGJABowM6IANLMrEyMTIzMjCXpyRWJBqZshWXJJYBKOMAFHFBucAAAAAAAAB//8AAngBY2BkYGDgA2IJBhBgAvKZGViBJAuYxwAABJsAOgAAeAFjYGBgZACCk535hiD60tn0azAaAEqpB6wAAA==") format("woff");font-weight:normal;font-style:normal}.jdgm-star{font-family:'JudgemeStar';display:inline !important;text-decoration:none !important;padding:0 4px 0 0 !important;margin:0 !important;font-weight:bold;opacity:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.jdgm-star:hover{opacity:1}.jdgm-star:last-of-type{padding:0 !important}.jdgm-star.jdgm--on:before{content:"\e000"}.jdgm-star.jdgm--off:before{content:"\e001"}.jdgm-star.jdgm--half:before{content:"\e002"}.jdgm-widget *{margin:0;line-height:1.4;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-overflow-scrolling:touch}.jdgm-hidden{display:none !important;visibility:hidden !important}.jdgm-temp-hidden{display:none}.jdgm-spinner{width:40px;height:40px;margin:auto;border-radius:50%;border-top:2px solid #eee;border-right:2px solid #eee;border-bottom:2px solid #eee;border-left:2px solid #ccc;-webkit-animation:jdgm-spin 0.8s infinite linear;animation:jdgm-spin 0.8s infinite linear}.jdgm-prev-badge{display:block !important}
+
+</style>
+
+
+  
+  
+   
+
+
+
+
+
+
+
+<!-- BEGIN app snippet: theme_fix_tags -->
+<!-- END app snippet -->
+<!-- End of Judge.me Core -->
+
+
+
+<!-- END app block --><!-- BEGIN app block: shopify://apps/all-in-gift/blocks/embed/14c78036-27a0-4098-a9e3-c3f1525dedff -->
+<!-- END app block --><!-- BEGIN app block: shopify://apps/pagefly-ai-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200 -->
 
 <!-- BEGIN app snippet: pagefly-cro-ab-testing-main -->
 
@@ -4483,60 +4614,7 @@ div:has( > svg[id="effectiveAppsScrollToTopBtn"])::before {
 <!-- END app snippet -->
 
 
-<!-- END app block --><!-- BEGIN app block: shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d -->
-
-
-<style>
-                .globo-formbuilder[data-id="87059"],.globo-formbuilder[data-id="ODcwNTk="]{
-        display: block;
-        height:853px;
-        margin: 30px auto;
-    }
-               </style>
-
-
-<!-- END app block --><!-- BEGIN app block: shopify://apps/all-in-gift/blocks/embed/14c78036-27a0-4098-a9e3-c3f1525dedff -->
 <!-- END app block --><!-- BEGIN app block: shopify://apps/commchat-limne/blocks/embed/658dd6fd-64bc-4f04-bcc4-f524cd4fe11a -->
-<!-- END app block --><!-- BEGIN app block: shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8 --><!-- Start of Judge.me Core -->
-
-
-
-
-
-
-
-
-
-
-
- <style class='jdgm-settings-style'>﻿.jdgm-xx{left:0}:root{--jdgm-primary-color: #524349;--jdgm-secondary-color: rgba(82,67,73,0.1);--jdgm-star-color: #524349;--jdgm-write-review-text-color: white;--jdgm-write-review-bg-color: #524349;--jdgm-paginate-color: #524349;--jdgm-border-radius: 0;--jdgm-reviewer-name-color: #524349}.jdgm-histogram__bar-content{background-color:#524349}.jdgm-rev[data-verified-buyer=true] .jdgm-rev__icon.jdgm-rev__icon:after,.jdgm-rev__buyer-badge.jdgm-rev__buyer-badge{color:white;background-color:#524349}.jdgm-review-widget--small .jdgm-gallery.jdgm-gallery .jdgm-gallery__thumbnail-link:nth-child(8) .jdgm-gallery__thumbnail-wrapper.jdgm-gallery__thumbnail-wrapper:before{content:"もっと見る"}@media only screen and (min-width: 768px){.jdgm-gallery.jdgm-gallery .jdgm-gallery__thumbnail-link:nth-child(8) .jdgm-gallery__thumbnail-wrapper.jdgm-gallery__thumbnail-wrapper:before{content:"もっと見る"}}.jdgm-preview-badge .jdgm-star.jdgm-star{color:#524349}.jdgm-prev-badge[data-average-rating='0.00']{display:none !important}.jdgm-author-fullname{display:none !important}.jdgm-author-last-initial{display:none !important}.jdgm-rev-widg__title{visibility:hidden}.jdgm-rev-widg__summary-text{visibility:hidden}.jdgm-prev-badge__text{visibility:hidden}.jdgm-rev__prod-link-prefix:before{content:'について'}.jdgm-rev__variant-label:before{content:'バリエーション: '}.jdgm-rev__out-of-store-text:before{content:'（ストア外）'}@media only screen and (min-width: 768px){.jdgm-rev__pics .jdgm-rev_all-rev-page-picture-separator,.jdgm-rev__pics .jdgm-rev__product-picture{display:none}}@media only screen and (max-width: 768px){.jdgm-rev__pics .jdgm-rev_all-rev-page-picture-separator,.jdgm-rev__pics .jdgm-rev__product-picture{display:none}}.jdgm-preview-badge[data-template="product"]{display:none !important}.jdgm-preview-badge[data-template="collection"]{display:none !important}.jdgm-preview-badge[data-template="index"]{display:none !important}.jdgm-review-widget[data-from-snippet="true"]{display:none !important}.jdgm-verified-count-badget[data-from-snippet="true"]{display:none !important}.jdgm-carousel-wrapper[data-from-snippet="true"]{display:none !important}.jdgm-all-reviews-text[data-from-snippet="true"]{display:none !important}.jdgm-medals-section[data-from-snippet="true"]{display:none !important}.jdgm-ugc-media-wrapper[data-from-snippet="true"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_collected_via_store_invitation"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_collected_from_another_provider"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_collected_from_store_visitor"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_earned_for_future_purchase"]{display:none !important}.jdgm-review-snippet-widget{--jdgm-snippet-card-color: #fff;--jdgm-snippet-text-color: #000;--jdgm-snippet-lighter-text-color: #7B7B7B;--jdgm-snippet-star-color: #524349;--jdgm-snippet-border-radius: 8px;--jdgm-snippet-arrows-bg-color: #fff;--jdgm-snippet-arrows-color: #000}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__cards-container .jdgm-rev-snippet-card{border-radius:8px;background:#fff}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__cards-container .jdgm-rev-snippet-card__rev-rating .jdgm-star{color:#524349}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__prev-btn,.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__next-btn{border-radius:50%;background:#fff}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__prev-btn>svg,.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__next-btn>svg{fill:#000}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jm-mfp-content,.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev__icon,.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev__pic-img,.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev__reply{border-radius:8px}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev[data-verified-buyer="true"] .jdgm-full-rev__icon::after{border-radius:8px}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev .jdgm-rev__buyer-badge{border-radius:calc( 8px / 2 )}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev .jdgm-full-rev__replier::before{content:'LIMNEオンラインショップ'}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev .jdgm-full-rev__product-button{border-radius:calc( 8px * 6 )}
-</style> <style class='jdgm-settings-style'></style>
-
-  
-  
-  
-  <style class='jdgm-miracle-styles'>
-  @-webkit-keyframes jdgm-spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);-ms-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes jdgm-spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);-ms-transform:rotate(359deg);transform:rotate(359deg)}}@font-face{font-family:'JudgemeStar';src:url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAScAA0AAAAABrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAEgAAAABoAAAAcbyQ+3kdERUYAAARgAAAAHgAAACAAMwAGT1MvMgAAAZgAAABGAAAAVi+vS9xjbWFwAAAB8AAAAEAAAAFKwBMjvmdhc3AAAARYAAAACAAAAAj//wADZ2x5ZgAAAkAAAAEJAAABdH33LXtoZWFkAAABMAAAAC0AAAA2BroQKWhoZWEAAAFgAAAAHAAAACQD5QHQaG10eAAAAeAAAAAPAAAAFAYAAABsb2NhAAACMAAAAA4AAAAOAO4AeG1heHAAAAF8AAAAHAAAACAASgAvbmFtZQAAA0wAAADeAAABkorWfVZwb3N0AAAELAAAACkAAABEp3ubLXgBY2BkYADhPPP4OfH8Nl8ZuJkYQODS2fRrCPr/aSYGxq1ALgcDWBoAO60LkwAAAHgBY2BkYGDc+v80gx4TAwgASaAICmABAFB+Arl4AWNgZGBgYGPQYWBiAAIwyQgWc2AAAwAHVQB6eAFjYGRiYJzAwMrAwejDmMbAwOAOpb8ySDK0MDAwMbByMsCBAAMCBKS5pjA4PGB4wMR44P8BBj3GrQymQGFGkBwAjtgK/gAAeAFjYoAAEA1jAwAAZAAHAHgB3crBCcAwDEPRZydkih567CDdf4ZskmLwFBV8xBfCaC4BXkOUmx4sU0h2ngNb9V0vQCxaRKIAevT7fGWuBrEAAAAAAAAAAAA0AHgAugAAeAF9z79Kw1AUx/FzTm7un6QmJtwmQ5Bg1abgEGr/BAqlU6Gju+Cgg1MkQ/sA7Vj7BOnmO/gUvo2Lo14NqIO6/IazfD8HEODtmQCfoANwNsyp2/GJt3WKQrd1NLiYYWx2PBqOsmJMEOznPOTzfSCrhAtbbLdmeFLJV9eKd63WLrZcIcuaEVdssWCKM6pLCfTVOYbz/0pNSMSZKLIZpvh78sAUH6PlMrreTCabP9r+Z/puPZ2ur/RqpQHgh+MIegCnXeM4MRAPjYN//5tj4ZtTjkFqEdmeMShlEJ7tVAly2TAkx6R68Fl4E/aVvn8JqHFQ4JS1434gXKcuL31dDhzs3YbsEOAd/IU88gAAAHgBfY4xTgMxEEVfkk0AgRCioKFxQYd2ZRtpixxgRU2RfhU5q5VWseQ4JdfgAJyBlmNwAM7ABRhZQ0ORwp7nr+eZAa54YwYg9zm3ynPOeFRe8MCrciXOh/KSS76UV5L/iDmrLiS5AeU519wrL3jmSbkS5115yR2fyivJv9kx0ZMZ2RLZw27q87iNQi8EBo5FSPIMw3HqBboi5lKTGAGDp8FKXWP+t9TU01Lj5His1Ba6uM9dTEMwvrFmbf5GC/q2drW3ruXUhhsCiQOjznFlCzYhHUZp4xp76vsvQh89CQAAeAFjYGJABowM6IANLMrEyMTIzMjCXpyRWJBqZshWXJJYBKOMAFHFBucAAAAAAAAB//8AAngBY2BkYGDgA2IJBhBgAvKZGViBJAuYxwAABJsAOgAAeAFjYGBgZACCk535hiD60tn0azAaAEqpB6wAAA==") format("woff");font-weight:normal;font-style:normal}.jdgm-star{font-family:'JudgemeStar';display:inline !important;text-decoration:none !important;padding:0 4px 0 0 !important;margin:0 !important;font-weight:bold;opacity:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.jdgm-star:hover{opacity:1}.jdgm-star:last-of-type{padding:0 !important}.jdgm-star.jdgm--on:before{content:"\e000"}.jdgm-star.jdgm--off:before{content:"\e001"}.jdgm-star.jdgm--half:before{content:"\e002"}.jdgm-widget *{margin:0;line-height:1.4;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-overflow-scrolling:touch}.jdgm-hidden{display:none !important;visibility:hidden !important}.jdgm-temp-hidden{display:none}.jdgm-spinner{width:40px;height:40px;margin:auto;border-radius:50%;border-top:2px solid #eee;border-right:2px solid #eee;border-bottom:2px solid #eee;border-left:2px solid #ccc;-webkit-animation:jdgm-spin 0.8s infinite linear;animation:jdgm-spin 0.8s infinite linear}.jdgm-prev-badge{display:block !important}
-
-</style>
-
-
-  
-  
-   
-
-
-
-
-
-
-
-<!-- BEGIN app snippet: theme_fix_tags -->
-<!-- END app snippet -->
-<!-- End of Judge.me Core -->
-
-
-
 <!-- END app block -->
 
 
@@ -4546,7 +4624,7 @@ div:has( > svg[id="effectiveAppsScrollToTopBtn"])::before {
 
   
 
-<meta name="shopify-y" content="c082e401-3ec3-414d-8209-8081df6965a4" data-expiration="1822905235000"><meta name="shopify-s" content="27f0899c-7849-48c1-b8a4-3d878d95de21" data-expiration="1791349435000"><meta name="new-cookie-storage-activated" content="t">
+<meta name="shopify-y" content="eb8ff61a-ff52-4744-93d3-ece441be7df8" data-expiration="1822906311000"><meta name="shopify-s" content="5a97c306-0434-41bb-aac1-b263d4dab99a" data-expiration="1791350511000"><meta name="new-cookie-storage-activated" content="t">
 </head>
 
 <body class="template-page suffix_limne-recovery 
@@ -5917,6 +5995,9 @@ div:has( > svg[id="effectiveAppsScrollToTopBtn"])::before {
       <div class="aath-heading">
         <p class="aath-label">別売りシーツのご案内</p>
         <h3 class="aath-title" id="aath-title">A.A.THボックスシーツ</h3>
+        <figure class="aath-hero">
+          <img src="https://limne.jp/cdn/shop/products/4580537460462_001.jpg?v=1774318158&amp;width=800" alt="A.A.THのボックスシーツ（箱入り）" loading="lazy" decoding="async">
+        </figure>
         <p class="aath-intro">「ケア繊維A.A.TH マットレス用ボックスシーツ」は、マットレスとは別売りのシーツです。<span class="aath-separate">LIMNEの現行3モデルのマットレス本体には、A.A.THを使用していません。</span></p>
       </div>
 
@@ -5945,24 +6026,21 @@ div:has( > svg[id="effectiveAppsScrollToTopBtn"])::before {
       </div>
 
       <div class="aath-detail">
-        <div class="aath-item">
-          <figure class="aath-photo">
-            <img src="https://limne.jp/cdn/shop/files/NEW_AATH_mattresscover_03.jpg?v=1708398582&amp;width=800" alt="A.A.THのボックスシーツ（マットレス・ベッドフレームは別売り）をマットレスに掛けているところ" loading="lazy" decoding="async">
-          </figure>
-          <div class="aath-item-body">
-            <h4 class="aath-item-title">A.A.THとは</h4>
-            <p class="aath-item-text">繊維にプラチナなどの貴金属の微粒子を練り込んだ素材です。生地はポリエステル100%です。</p>
-            <p class="aath-item-note">写真のマットレス・ベッドフレームは付属しません。</p>
+        <figure class="aath-photo">
+          <img src="https://limne.jp/cdn/shop/files/NEW_AATH_mattresscover_03.jpg?v=1708398582&amp;width=800" alt="A.A.THのボックスシーツ（マットレス・ベッドフレームは別売り）をマットレスに掛けているところ" loading="lazy" decoding="async">
+        </figure>
+        <div class="aath-detail-body">
+          <div class="aath-care">
+            <div class="aath-care-item">
+              <h4 class="aath-item-title">A.A.THとは</h4>
+              <p class="aath-item-text">繊維にプラチナなどの貴金属の微粒子を練り込んだ素材です。生地はポリエステル100%です。</p>
+            </div>
+            <div class="aath-care-item">
+              <h4 class="aath-item-title">ご家庭で丸洗い</h4>
+              <p class="aath-item-text">A.A.THのボックスシーツは、ご家庭で丸洗いできます。生地の傷みを防ぐため、洗濯ネットの使用をおすすめします。</p>
+            </div>
           </div>
-        </div>
-        <div class="aath-item">
-          <figure class="aath-photo">
-            <img src="https://limne.jp/cdn/shop/products/4580537460462_001.jpg?v=1774318158&amp;width=800" alt="畳んだA.A.THのボックスシーツとパッケージ" loading="lazy" decoding="async">
-          </figure>
-          <div class="aath-item-body">
-            <h4 class="aath-item-title">ご家庭で丸洗い</h4>
-            <p class="aath-item-text">A.A.THのボックスシーツは、ご家庭で丸洗いできます。生地の傷みを防ぐため、洗濯ネットの使用をおすすめします。</p>
-          </div>
+          <p class="aath-item-note">写真のマットレス・ベッドフレームは付属しません。</p>
         </div>
       </div>
 
