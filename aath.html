@@ -796,6 +796,167 @@
   }
 }
 
+
+/* v4（10/8）：見出しを目立たせる。商品ページへのリンクを、押せる枠だと分かる形に（別売りの札・2行の文・丸い矢印） */
+.limne-recovery .aath-v3 .aath-label {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: .24em;
+}
+
+.limne-recovery .aath-v3 .aath-title {
+  margin-top: 16px;
+}
+
+.limne-recovery .aath-v3 .aath-title-lead {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: .08em;
+}
+
+.limne-recovery .aath-v3 .aath-title-main {
+  font-size: 30px;
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+
+.limne-recovery .aath-v3 .aath-title-main::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin-top: 18px;
+  background: var(--gold);
+}
+
+.limne-recovery .aath-v3 .aath-links {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+  align-items: stretch;
+}
+
+.limne-recovery .aath-v3 .aath-product-link {
+  grid-template-columns: minmax(0, 1fr) 44px;
+  gap: 16px;
+  min-height: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.limne-recovery .aath-v3 .aath-product-link--main {
+  border-color: var(--gold);
+}
+
+.limne-recovery .aath-v3 .aath-product-link:hover {
+  border-color: var(--ink);
+  box-shadow: 0 6px 18px rgba(82, 67, 73, .10);
+}
+
+.limne-recovery .aath-v3 .aath-link-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-bottom: 8px;
+}
+
+.limne-recovery .aath-v3 .aath-link-badge {
+  display: inline-block;
+  padding: 1px 10px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: .06em;
+}
+
+.limne-recovery .aath-v3 .aath-link-tags .aath-link-note {
+  display: inline;
+  margin: 0;
+  font-size: 12px;
+}
+
+.limne-recovery .aath-v3 .aath-link-lead {
+  display: block;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.8;
+  letter-spacing: .04em;
+}
+
+.limne-recovery .aath-v3 .aath-link-title {
+  margin-top: 2px;
+  font-size: 17px;
+  line-height: 1.8;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.limne-recovery .aath-v3 .aath-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  color: var(--ink);
+  font-size: 18px;
+  transition: transform .2s;
+}
+
+.limne-recovery .aath-v3 .aath-product-link--main .aath-arrow {
+  background: var(--ink);
+  color: #fff;
+}
+
+.limne-recovery .aath-v3 .aath-product-link:hover .aath-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 860px) {
+  .limne-recovery .aath-v3 .aath-label {
+    font-size: 12px;
+    letter-spacing: .16em;
+  }
+
+  .limne-recovery .aath-v3 .aath-title-lead {
+    font-size: 15px;
+    letter-spacing: .04em;
+  }
+
+  .limne-recovery .aath-v3 .aath-title-main {
+    font-size: 25px;
+    letter-spacing: .06em;
+  }
+
+  .limne-recovery .aath-v3 .aath-title-main::after {
+    margin-top: 14px;
+  }
+
+  .limne-recovery .aath-v3 .aath-links {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .limne-recovery .aath-v3 .aath-product-link {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .limne-recovery .aath-v3 .aath-link-title {
+    font-size: 16px;
+  }
+}
+
 </style>
 
 <!-- Start VWO Async SmartCode -->
@@ -6254,8 +6415,8 @@ div:has( > svg[id="effectiveAppsScrollToTopBtn"])::before {
             <p>マットレスと一緒にご購入の場合も、お客様のご都合によるA.A.THのボックスシーツの返品・交換はお受けしていません（<a href="https://limne.jp/pages/shopping_guide#7">ショッピングガイド</a>）。</p>
           </div>
           <div class="aath-links">
-            <a class="aath-product-link aath-product-link--main" href="https://limne.jp/products/limne_mattress-aath-cover"><span class="aath-link-copy"><span class="aath-link-note">シングル・セミダブル・ダブル</span> <span class="aath-link-title">A.A.THボックスシーツを見る</span></span><span class="aath-arrow" aria-hidden="true">→</span></a>
-            <a class="aath-product-link" href="https://limne.jp/products/limne_boxsheets"><span class="aath-link-copy"><span class="aath-link-note">通常品／3モデル対応・シングル〜キング</span> <span class="aath-link-title">リムネ ボックスシーツを見る</span></span><span class="aath-arrow" aria-hidden="true">→</span></a>
+            <a class="aath-product-link aath-product-link--main" href="https://limne.jp/products/limne_mattress-aath-cover"><span class="aath-link-copy"><span class="aath-link-tags"><span class="aath-link-badge">マットレスとは別売り</span><span class="aath-link-note">シングル・セミダブル・ダブル</span></span><span class="aath-link-lead">リムネを機能性素材型リカバリーマットレスへ押し上げる</span><span class="aath-link-title">A.A.THボックスシーツを見る</span></span><span class="aath-arrow" aria-hidden="true">→</span></a>
+            <a class="aath-product-link" href="https://limne.jp/products/limne_boxsheets"><span class="aath-link-copy"><span class="aath-link-tags"><span class="aath-link-note">通常品／3モデル対応・シングル〜キング</span></span><span class="aath-link-title">リムネ ボックスシーツを見る</span></span><span class="aath-arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
